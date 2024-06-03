@@ -4,29 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Damage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Damage Calculator</h1>
-    <form id="damageForm">
-        <label for="attack">Attack: </label>
-        <input type="number" id="attack" name="attack"><br><br>
-        <label for="defense">Defense: </label>
-        <input type="number" id="defense" name="defense"><br><br>
-        <button type="button" onclick="calculateDamage()">Calculate</button>
-    </form>
+    <div class="container">
+        <div class="block">
+            <h2>Block 1</h2>
+            <input type="number" id="attack1" placeholder="Attack 1"><br><br>
+            <input type="number" id="defense1" placeholder="Defense 1"><br><br>
+        </div>
+        <div class="block">
+            <h2>Block 2</h2>
+            <input type="number" id="attack2" placeholder="Attack 2"><br><br>
+            <input type="number" id="defense2" placeholder="Defense 2"><br><br>
+        </div>
+        <div class="block">
+            <h2>Block 3</h2>
+            <input type="number" id="attack3" placeholder="Attack 3"><br><br>
+            <input type="number" id="defense3" placeholder="Defense 3"><br><br>
+        </div>
+        <div class="block">
+            <h2>Block 4</h2>
+            <input type="number" id="attack4" placeholder="Attack 4"><br><br>
+            <input type="number" id="defense4" placeholder="Defense 4"><br><br>
+        </div>
+        <div class="block">
+            <h2>Block 5</h2>
+            <input type="number" id="attack5" placeholder="Attack 5"><br><br>
+            <input type="number" id="defense5" placeholder="Defense 5"><br><br>
+        </div>
+        <div class="block">
+            <h2>Block 6</h2>
+            <input type="number" id="attack6" placeholder="Attack 6"><br><br>
+            <input type="number" id="defense6" placeholder="Defense 6"><br><br>
+        </div>
+        <div class="block">
+            <h2>Block 7</h2>
+            <input type="number" id="attack7" placeholder="Attack 7"><br><br>
+            <input type="number" id="defense7" placeholder="Defense 7"><br><br>
+        </div>
+    </div>
+    <button onclick="calculateDamage()">Calculate</button>
     <h2 id="result">Damage: </h2>
 
-    <script>
-        function calculateDamage() {
-            const attack = document.getElementById('attack').value;
-            const defense = document.getElementById('defense').value;
-            if (attack && defense) {
-                const damage = attack - defense;
-                document.getElementById('result').innerText = 'Damage: ' + (damage > 0 ? damage : 0);
-            } else {
-                alert('Please enter both attack and defense values.');
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: row; /* 確保橫向排列 */
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap; /* 確保如果空間不足，區塊會自動換行 */
+}
+.block {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    width: 13%; /* 確保每個區塊的寬度 */
+    min-width: 100px;
+    text-align: center;
+    box-sizing: border-box; /* 確保 padding 包含在寬度內 */
+}
+.block:nth-child(1) { background-color: #ffebee; }
+.block:nth-child(2) { background-color: #e8f5e9; }
+.block:nth-child(3) { background-color: #fffde7; }
+.block:nth-child(4) { background-color: #e3f2fd; }
+.block:nth-child(5) { background-color: #f3e5f5; }
+.block:nth-child(6) { background-color: #fce4ec; }
+.block:nth-child(7) { background-color: #e0f7fa; }
+input[type="number"] {
+    width: 80%; /* 確保輸入欄位不會超過區塊邊界 */
+    padding: 5px;
+    margin: 5px 0;
+    box-sizing: border-box; /* 確保 padding 包含在寬度內 */
+}
