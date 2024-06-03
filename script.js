@@ -12,6 +12,7 @@ function calculateDamage() {
     let damage_amplify=document.getElementById("damage_amplify").value;
     //爆擊乘區
     let critical_rate=document.getElementById("critical_rate").value;
+    let unCritical_rate=(100-critical_rate).toFixed(2)
     let critical_damage=document.getElementById("critical_damage").value;
     //防禦 待補充
     //抗性 待補充
@@ -27,5 +28,5 @@ function calculateDamage() {
 
     let total_normal_damage=total_attack*total_skill_multiplier*total_damage_multiplier*total_damage_amplify*1
     let total_crit_damage=total_normal_damage*total_critical_damage
-    document.getElementById('result').innerText = '未爆擊傷害('+(100-critical_rate)+'%):'+total_normal_damage+'\n爆擊傷害('+critical_rate+'%):'+total_crit_damage;
+    document.getElementById('result').innerText = '未爆擊傷害('+unCritical_rate+'%):'+total_normal_damage+'\n爆擊傷害('+critical_rate+'%):'+total_crit_damage;
 }
