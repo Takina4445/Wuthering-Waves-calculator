@@ -5,49 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Damage Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>Damage Calculator</h1>
+    <h1 class="center-text">鳴潮傷害簡易計算器</h1>
     <div class="container">
         <div class="block">
-            <h2>Block 1</h2>
-            <input type="number" id="attack1" placeholder="Attack 1"><br><br>
-            <input type="number" id="defense1" placeholder="Defense 1"><br><br>
+            <h2>基數區</h2>
+            <input type="number" id="attack_basicValue" placeholder="攻擊力白值"><br><br>
+            <input type="number" id="attack_percentageBoost" placeholder="百分比加成(%)(大攻擊)"><br><br>
+            <input type="number" id="attack_otherBoost" placeholder="其他加成(小攻擊)"><br><br>
         </div>
         <div class="block">
-            <h2>Block 2</h2>
-            <input type="number" id="attack2" placeholder="Attack 2"><br><br>
-            <input type="number" id="defense2" placeholder="Defense 2"><br><br>
+            <h2>技能倍率乘區</h2>
+            <input type="number" id="skill_multiplier" placeholder="技能倍率(%)"><br><br>
+            <!-- <input type="number" id="defense2" placeholder="Defense 2"><br><br> -->
         </div>
         <div class="block">
-            <h2>Block 3</h2>
-            <input type="number" id="attack3" placeholder="Attack 3"><br><br>
-            <input type="number" id="defense3" placeholder="Defense 3"><br><br>
+            <h2>傷害加乘乘區</h2>
+            <input type="number" id="attribute_damage_multiplier" placeholder="屬性傷害倍率(%)"><br><br>
+            <input type="number" id="specificSkill_damage_multiplier" placeholder="對應技能傷害倍率(%)"><br><br>
         </div>
         <div class="block">
-            <h2>Block 4</h2>
-            <input type="number" id="attack4" placeholder="Attack 4"><br><br>
-            <input type="number" id="defense4" placeholder="Defense 4"><br><br>
+            <h2>傷害加深區</h2>
+            <input type="number" id="damage_amplify" placeholder="傷害加深(%)"><br><br>
+            <!-- <input type="number" id="defense4" placeholder="Defense 4"><br><br> -->
         </div>
         <div class="block">
-            <h2>Block 5</h2>
-            <input type="number" id="attack5" placeholder="Attack 5"><br><br>
-            <input type="number" id="defense5" placeholder="Defense 5"><br><br>
+            <h2>爆擊乘區</h2>
+            <input type="number" id="critical_rate" placeholder="爆擊率(%)"><br><br>
+            <input type="number" id="critical_damage" placeholder="爆擊傷害(%)"><br><br>
         </div>
         <div class="block">
-            <h2>Block 6</h2>
-            <input type="number" id="attack6" placeholder="Attack 6"><br><br>
-            <input type="number" id="defense6" placeholder="Defense 6"><br><br>
+            <h2>防禦乘區</h2>
+            <h5>(尚未製作)</h5>
+            <input type="number" id="player_level" placeholder="角色等級" disabled><br><br>
+            <input type="number" id="monster_level" placeholder="怪物等級" disabled><br><br>
         </div>
         <div class="block">
-            <h2>Block 7</h2>
-            <input type="number" id="attack7" placeholder="Attack 7"><br><br>
-            <input type="number" id="defense7" placeholder="Defense 7"><br><br>
+            <h2>抗性乘區</h2>
+            <h5>(尚未製作)</h5>
+            <input type="number" id="attack7" placeholder="基礎全屬性抗性" disabled><br><br>
+            <input type="number" id="defense7" placeholder="額外屬性抗性" disabled><br><br>
         </div>
     </div>
     <button onclick="calculateDamage()">Calculate</button>
     <h2 id="result">Damage: </h2>
     <h3>畫面與計算 設計中...<h3>
-    <script src="script.js"></script>
+    
 </body>
 </html>

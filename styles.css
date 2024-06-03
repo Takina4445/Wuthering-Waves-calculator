@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: row; /* 確保橫向排列 */
     justify-content: space-around;
-    margin: 20px;
+    margin: 10px;
     flex-wrap: wrap; /* 確保如果空間不足，區塊會自動換行 */
 }
 .block {
@@ -26,8 +26,18 @@ body {
 .block:nth-child(6) { background-color: #fce4ec; }
 .block:nth-child(7) { background-color: #e0f7fa; }
 input[type="number"] {
-    width: 80%; /* 確保輸入欄位不會超過區塊邊界 */
-    padding: 5px;
+    width: 95%; /* 確保輸入欄位不會超過區塊邊界 */
+    padding: 3px;
     margin: 5px 0;
+    font-size: 0.7rem;
     box-sizing: border-box; /* 確保 padding 包含在寬度內 */
+}
+h2 {
+    font-size: 1.2rem; /* 可以根據需要調整大小 */
+}
+input {
+    font-size: 1.3rem;
+}
+.center-text {
+    text-align: center;
 }
