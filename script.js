@@ -19,7 +19,9 @@ function calculateDamage() {
 
     
     let total_attack=attack_basicValue*(1+attack_percentageBoost/100)+attack_otherBoost
-    let total_skill_multiplier=skill_multiplier
+    console.log(total_attack)
+    let total_skill_multiplier=skill_multiplier/100
+    
     //略過倍率提升
     let total_damage_multiplier=1+(attribute_damage_multiplier/100)+(specificSkill_damage_multiplier/100)
     let total_damage_amplify=1+(damage_amplify/100)
@@ -27,6 +29,9 @@ function calculateDamage() {
 
 
     let total_normal_damage=total_attack*total_skill_multiplier*total_damage_multiplier*total_damage_amplify*1
-    let total_crit_damage=total_normal_damage*total_critical_damage
+    total_normal_damage=total_normal_damage.toFixed(2)
+    let total_crit_damage=total_normal_damage*(total_critical_damage/100)
+    total_crit_damage=total_crit_damage.toFixed(2)
+
     document.getElementById('result').innerText = '未爆擊傷害('+unCritical_rate+'%):'+total_normal_damage+'\n爆擊傷害('+critical_rate+'%):'+total_crit_damage;
 }
