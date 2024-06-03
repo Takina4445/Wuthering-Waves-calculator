@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damage Calculator</title>
+</head>
+<body>
+    <h1>Damage Calculator</h1>
+    <form id="damageForm">
+        <label for="attack">Attack: </label>
+        <input type="number" id="attack" name="attack"><br><br>
+        <label for="defense">Defense: </label>
+        <input type="number" id="defense" name="defense"><br><br>
+        <button type="button" onclick="calculateDamage()">Calculate</button>
+    </form>
+    <h2 id="result">Damage: </h2>
+
+    <script>
+        function calculateDamage() {
+            const attack = document.getElementById('attack').value;
+            const defense = document.getElementById('defense').value;
+            if (attack && defense) {
+                const damage = attack - defense;
+                document.getElementById('result').innerText = 'Damage: ' + (damage > 0 ? damage : 0);
+            } else {
+                alert('Please enter both attack and defense values.');
+            }
+        }
+    </script>
+</body>
+</html>
