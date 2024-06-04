@@ -41,3 +41,29 @@ input {
 .center-text {
     text-align: center;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}
+caption {
+    caption-side: top;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.center-text {
+    text-align: center;
+}
+.small-text {
+    font-size: 0.8em;
+    color: #555;
+}

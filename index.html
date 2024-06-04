@@ -38,21 +38,53 @@
         </div>
         <div class="block">
             <h2>防禦乘區</h2>
-            <h5>(尚未製作)</h5>
-            <input type="number" id="player_level" placeholder="角色等級" disabled><br><br>
-            <input type="number" id="monster_level" placeholder="怪物等級" disabled><br><br>
+            <!-- <h5>(尚未製作)</h5> -->
+            <input type="number" id="player_level" placeholder="角色等級" ><br><br>
+            <input type="number" id="monster_level" placeholder="怪物等級" ><br><br>
         </div>
         <div class="block">
             <h2>抗性乘區</h2>
-            <h5>(尚未製作)</h5>
-            <input type="number" id="attack7" placeholder="基礎全屬性抗性" disabled><br><br>
-            <input type="number" id="defense7" placeholder="額外屬性抗性" disabled><br><br>
+            <!-- <h5>(尚未製作)</h5> -->
+            <input type="number" id="base_attribute_resistance" placeholder="基礎全屬性抗性" ><br><br>
+            <input type="number" id="additional_attribute_resistance" placeholder="額外屬性抗性" ><br><br>
         </div>
     </div>
     <script src="script.js"></script>
     <button onclick="calculateDamage()">計算</button>
     <h2 id="result">Damage: </h2>
-    <h3>畫面與計算 設計中...<h3>
-    
+    <h4>實際傷害為理論值向上取整<h4>
+    <table>
+        <caption>怪物抗性參考表</caption>
+        <thead>
+            <tr>
+                <th>模式</th>
+                <th>怪物</th>
+                <th>基礎全屬性抗性</th>
+                <th>額外屬性抗性</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>大世界</td>
+                <td>普通飛廉之猩</td>
+                <td>10%</td>
+                <td>30%</td>
+            </tr>
+            <tr>
+                <td>深塔模式</td>
+                <td>100級猩猩</td>
+                <td>10%</td>
+                <td>50%</td>
+            </tr>
+            <tr>
+                <td>全息模式</td>
+                <td>全息全階猩猩</td>
+                <td>10%</td>
+                <td>70%</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="center-text">網站數值與計算參考網站 <a href="https://www.steamxo.com/2024/05/23/3294441" target="_blank">《鳴潮》傷害乘區科普 鳴潮角色傷害如何計算</a></p>
+    <p class="center-text small-text">數據如有錯誤或侵權請聯繫開發者</p>
 </body>
 </html>
