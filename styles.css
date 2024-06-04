@@ -4,19 +4,19 @@ body {
 }
 .container {
     display: flex;
-    flex-direction: row; /* 確保橫向排列 */
+    flex-direction: row;
     justify-content: space-around;
     margin: 10px;
-    flex-wrap: wrap; /* 確保如果空間不足，區塊會自動換行 */
+    flex-wrap: wrap;
 }
 .block {
     padding: 10px;
     margin: 5px;
     border-radius: 8px;
-    width: 13%; /* 確保每個區塊的寬度 */
+    width: 13%;
     min-width: 100px;
     text-align: center;
-    box-sizing: border-box; /* 確保 padding 包含在寬度內 */
+    box-sizing: border-box;
 }
 .block:nth-child(1) { background-color: #ffebee; }
 .block:nth-child(2) { background-color: #e8f5e9; }
@@ -26,14 +26,14 @@ body {
 .block:nth-child(6) { background-color: #fce4ec; }
 .block:nth-child(7) { background-color: #e0f7fa; }
 input[type="number"] {
-    width: 95%; /* 確保輸入欄位不會超過區塊邊界 */
+    width: 95%;
     padding: 3px;
     margin: 5px 0;
     font-size: 0.7rem;
-    box-sizing: border-box; /* 確保 padding 包含在寬度內 */
+    box-sizing: border-box;
 }
 h2 {
-    font-size: 1.2rem; /* 可以根據需要調整大小 */
+    font-size: 1.2rem;
 }
 input {
     font-size: 1.3rem;
@@ -45,7 +45,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    border: 1px solid black; /* 表格外部邊框 */
+    border: 1px solid black;
 }
 th, td {
     border: 1px solid black;
